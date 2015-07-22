@@ -1,0 +1,19 @@
+{
+    "jhipsterApp": {
+        "author" : {
+            "home": {
+                "title": "Authors",
+                "createLabel": "Créer un nouveau Author",
+                "createOrEditLabel": "Créer ou éditer un Author"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Author {{ id }} ?"
+            },
+            "detail": {
+                "title": "Author"
+            },
+            "firstname": "Firstname"
+        }
+    }
+}
+
