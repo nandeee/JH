@@ -1,0 +1,21 @@
+{
+    "jhipsterApp": {
+        "test4" : {
+            "home": {
+                "title": "Test4s",
+                "createLabel": "Créer un nouveau Test4",
+                "createOrEditLabel": "Créer ou éditer un Test4"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Test4 {{ id }} ?"
+            },
+            "detail": {
+                "title": "Test4"
+            },
+            "one": "One",
+            "two": "Two",
+            "three": "Three"
+        }
+    }
+}
+

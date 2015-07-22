@@ -1,0 +1,34 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "age",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Age",
+            "fieldNameUnderscored": "age",
+            "fieldInJavaBeanMethod": "Age",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "10",
+            "fieldValidateRulesMax": "100"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150722112021",
+    "dto": "no",
+    "pagination": "no",
+    "validation": true
+}

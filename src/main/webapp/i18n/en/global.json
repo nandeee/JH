@@ -9,6 +9,11 @@
                 "author": "Author",
                 "courier": "Courier",
                 "master_bag": "Master_bag",
+                "test1": "Test1",
+                "test2": "Test2",
+                "test3": "Test3",
+                "test4": "Test4",
+                "test5": "Test5",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

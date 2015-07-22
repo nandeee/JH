@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span translate="jhipsterApp.test2.detail.title">Test2</span> {{test2.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test2.age">Age</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test2.age}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="test2"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

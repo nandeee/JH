@@ -1,0 +1,64 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "one",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "One",
+            "fieldNameUnderscored": "one",
+            "fieldInJavaBeanMethod": "One",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": 0,
+            "fieldValidateRulesMaxlength": 20,
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "two",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Two",
+            "fieldNameUnderscored": "two",
+            "fieldInJavaBeanMethod": "Two",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "three",
+            "fieldType": "Long",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Three",
+            "fieldNameUnderscored": "three",
+            "fieldInJavaBeanMethod": "Three",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": 100
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150722115621",
+    "dto": "no",
+    "pagination": "no",
+    "validation": true
+}

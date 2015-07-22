@@ -1,0 +1,101 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "one",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "One",
+            "fieldNameUnderscored": "one",
+            "fieldInJavaBeanMethod": "One",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": 20,
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "two",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Two",
+            "fieldNameUnderscored": "two",
+            "fieldInJavaBeanMethod": "Two",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "three",
+            "fieldType": "BigDecimal",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Three",
+            "fieldNameUnderscored": "three",
+            "fieldInJavaBeanMethod": "Three",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "four",
+            "fieldType": "Long",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Four",
+            "fieldNameUnderscored": "four",
+            "fieldInJavaBeanMethod": "Four",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "five",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Five",
+            "fieldNameUnderscored": "five",
+            "fieldInJavaBeanMethod": "Five",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "six",
+            "fieldType": "DateTime",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Six",
+            "fieldNameUnderscored": "six",
+            "fieldInJavaBeanMethod": "Six",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "seven",
+            "fieldType": "Boolean",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Seven",
+            "fieldNameUnderscored": "seven",
+            "fieldInJavaBeanMethod": "Seven",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150722114948",
+    "dto": "no",
+    "pagination": "no",
+    "validation": true
+}

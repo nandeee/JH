@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span translate="jhipsterApp.test4.detail.title">Test4</span> {{test4.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test4.one">One</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test4.one}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test4.two">Two</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test4.two}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test4.three">Three</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test4.three}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="test4"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,20 @@
+Validation:
+
+> String
+Required
+Minimum length
+Maximum length
+Regular expression pattern
+
+> Integer
+Required
+Minimum size
+Maximum size
+
+> LocalDate
+Required
+
+> DateTime
+Required
+
+? Doing this with angular directives.

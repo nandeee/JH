@@ -1,0 +1,72 @@
+<div>
+    
+        <div class="header">
+            <span translate="jhipsterApp.test3.home.title">Test3s</span>
+            <md-button ng-hide="actionButton" ng-click="showForm=true; actionButton=true;" class="action">Create</md-button>
+            <md-button ng-show="actionButton" ng-click="showForm=false; actionButton=false" class="action">Close</md-button>
+        </div>
+        <md-content md-theme="altTheme" ng-show="showForm" layout-padding>
+            <form name="editForm" ng-submit="save()">
+                <div layout layout-sm="column">
+                    <md-input-container flex>
+                        <label>ID</label>
+                        <input ng-model="test3.id" readonly>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.one">
+                            One
+                        </label>
+                        <input type="text" ng-model="test3.one">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.two">
+                            Two
+                        </label>
+                        <input type="number" ng-model="test3.two">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.three">
+                            Three
+                        </label>
+                        <input type="number" ng-model="test3.three">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.four">
+                            Four
+                        </label>
+                        <input type="number" ng-model="test3.four">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.five">
+                            Five
+                        </label>
+                        <input type="date" ng-model="test3.five">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.six">
+                            Six
+                        </label>
+                        <input type="datetime-local" ng-model="test3.six">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test3.seven">
+                            Seven
+                        </label>
+                        <input type="checkbox" ng-model="test3.seven">
+                    </md-input-container>
+
+
+                </div>
+                <md-button md-theme="default" type="button" ng-click="clear();" class="action">Clear</md-button>
+                <md-button md-theme="default" class="action">Save</md-button>
+            </form>
+        </md-content>
+        <div id="grid" ui-grid-pinning ui-grid-edit ui-grid-cellNav ui-grid="gridOptions" class="grid"></div>
+</div>

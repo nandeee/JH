@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="jhipsterApp.test1.detail.title">Test1</span> {{test1.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test1.firstname">Firstname</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test1.firstname}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test1.age">Age</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test1.age}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test1.date">Date</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test1.date}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test1.time">Time</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test1.time}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jhipsterApp.test1.flag">Flag</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{test1.flag}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="test1"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

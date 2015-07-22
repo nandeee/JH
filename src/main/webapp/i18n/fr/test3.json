@@ -1,0 +1,25 @@
+{
+    "jhipsterApp": {
+        "test3" : {
+            "home": {
+                "title": "Test3s",
+                "createLabel": "Créer un nouveau Test3",
+                "createOrEditLabel": "Créer ou éditer un Test3"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Test3 {{ id }} ?"
+            },
+            "detail": {
+                "title": "Test3"
+            },
+            "one": "One",
+            "two": "Two",
+            "three": "Three",
+            "four": "Four",
+            "five": "Five",
+            "six": "Six",
+            "seven": "Seven"
+        }
+    }
+}
+
