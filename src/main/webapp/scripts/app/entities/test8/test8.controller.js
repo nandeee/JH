@@ -1,30 +1,30 @@
 'use strict';
 
 angular.module('jhipsterApp')
-    .controller('Test5Controller', function ($scope, Test5) {
+    .controller('Test8Controller', function ($scope, Test8) {
         window.scope = $scope;
-        $scope.test5s = [];
+        $scope.test8s = [];
         $scope.loadAll = function() {
-            Test5.get(function(result) {
-               $scope.test5s = result;
+            Test8.get(function(result) {
+               $scope.test8s = result;
             });
         };
         $scope.loadAll();
 
         $scope.showUpdate = function (id) {
-            Test5.get({id: id}, function(result) {
-                $scope.test5 = result;
+            Test8.get({id: id}, function(result) {
+                $scope.test8 = result;
             });
         };
 
         $scope.save = function () {
-            if ($scope.test5.id != null) {
-                Test5.update($scope.test5,
+            if ($scope.test8.id != null) {
+                Test8.update($scope.test8,
                     function () {
                         $scope.refresh();
                     });
             } else {
-                Test5.save($scope.test5,
+                Test8.save($scope.test8,
                     function () {
                         $scope.refresh();
                     });
@@ -32,12 +32,12 @@ angular.module('jhipsterApp')
         };
 
         $scope.edit = function (entity) {
-            $scope.test5 = entity;
+            $scope.test8 = entity;
             $scope.showForm = true;
         };
 
         $scope.delete = function (id) {
-            Test5.delete({id: id},
+            Test8.delete({id: id},
                 function () {
                     $scope.loadAll();
                     $scope.clear();
@@ -49,22 +49,22 @@ angular.module('jhipsterApp')
             $scope.clear();
         };
 
-        $scope.test5 = {name: null, age: null, date: null, id: null};
+        $scope.test8 = {name: null, age: null, date: null, time: null, id: null};
 
         $scope.clear = function () {
-            $scope.test5 = {name: null, age: null, date: null, id: null};
+            $scope.test8 = {name: null, age: null, date: null, time: null, id: null};
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
 
         };
 
         $scope.gridOptions = {
-            data: 'test5s',
+            data: 'test8s',
             enableFiltering: true,
             onRegisterApi: function(gridApi) {
                 $scope.gridApi = gridApi;
                 gridApi.edit.on.afterCellEdit($scope, function(rowEntity, colDef, newValue, oldValue) {
-                    Test5.update(rowEntity,
+                    Test8.update(rowEntity,
                         function() {
                             $scope.refresh();
                         });
@@ -78,15 +78,22 @@ angular.module('jhipsterApp')
 
             }, {
                 field: "name",
-                displayName: "name"
+                displayName: "name",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="text" required minlength=5 maxlength=10 ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
             }, {
                 field: "age",
-                displayName: "age"
+                displayName: "age",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="number" required min=2 max=10 ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
             }, {
                 field: "date",
                 displayName: "date",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="date" ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
+
+            }, {
+                field: "time",
+                displayName: "time",
                 editableCellTemplate: '<div> <form name="inputForm"> <input type="datetime-local" ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
 

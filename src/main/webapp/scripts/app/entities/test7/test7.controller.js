@@ -1,30 +1,30 @@
 'use strict';
 
 angular.module('jhipsterApp')
-    .controller('Test5Controller', function ($scope, Test5) {
+    .controller('Test7Controller', function ($scope, Test7) {
         window.scope = $scope;
-        $scope.test5s = [];
+        $scope.test7s = [];
         $scope.loadAll = function() {
-            Test5.get(function(result) {
-               $scope.test5s = result;
+            Test7.get(function(result) {
+               $scope.test7s = result;
             });
         };
         $scope.loadAll();
 
         $scope.showUpdate = function (id) {
-            Test5.get({id: id}, function(result) {
-                $scope.test5 = result;
+            Test7.get({id: id}, function(result) {
+                $scope.test7 = result;
             });
         };
 
         $scope.save = function () {
-            if ($scope.test5.id != null) {
-                Test5.update($scope.test5,
+            if ($scope.test7.id != null) {
+                Test7.update($scope.test7,
                     function () {
                         $scope.refresh();
                     });
             } else {
-                Test5.save($scope.test5,
+                Test7.save($scope.test7,
                     function () {
                         $scope.refresh();
                     });
@@ -32,12 +32,12 @@ angular.module('jhipsterApp')
         };
 
         $scope.edit = function (entity) {
-            $scope.test5 = entity;
+            $scope.test7 = entity;
             $scope.showForm = true;
         };
 
         $scope.delete = function (id) {
-            Test5.delete({id: id},
+            Test7.delete({id: id},
                 function () {
                     $scope.loadAll();
                     $scope.clear();
@@ -49,22 +49,22 @@ angular.module('jhipsterApp')
             $scope.clear();
         };
 
-        $scope.test5 = {name: null, age: null, date: null, id: null};
+        $scope.test7 = {name: null, age: null, date: null, etad: null, id: null};
 
         $scope.clear = function () {
-            $scope.test5 = {name: null, age: null, date: null, id: null};
+            $scope.test7 = {name: null, age: null, date: null, etad: null, id: null};
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
 
         };
 
         $scope.gridOptions = {
-            data: 'test5s',
+            data: 'test7s',
             enableFiltering: true,
             onRegisterApi: function(gridApi) {
                 $scope.gridApi = gridApi;
                 gridApi.edit.on.afterCellEdit($scope, function(rowEntity, colDef, newValue, oldValue) {
-                    Test5.update(rowEntity,
+                    Test7.update(rowEntity,
                         function() {
                             $scope.refresh();
                         });
@@ -88,6 +88,12 @@ angular.module('jhipsterApp')
                 field: "date",
                 displayName: "date",
                 editableCellTemplate: '<div> <form name="inputForm"> <input type="datetime-local" ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
+
+
+            }, {
+                field: "etad",
+                displayName: "etad",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="date" ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
 
             }, {

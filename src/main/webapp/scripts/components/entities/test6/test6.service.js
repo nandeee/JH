@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('jhipsterApp')
-    .factory('Test5', function ($resource, DateUtils) {
-        return $resource('api/test5s/:id', {}, {
+    .factory('Test6', function ($resource, DateUtils) {
+        return $resource('api/test6s/:id', {}, {
             'query': { method: 'GET', isArray: true},
             'get': {
                 method: 'GET', isArray: true,

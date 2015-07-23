@@ -1,0 +1,51 @@
+<div>
+    
+        <div class="header">
+            <span translate="jhipsterApp.test9.home.title">Test9s</span>
+            <md-button ng-hide="actionButton" ng-click="showForm=true; actionButton=true;" class="action">Create</md-button>
+            <md-button ng-show="actionButton" ng-click="showForm=false; actionButton=false" class="action">Close</md-button>
+        </div>
+        <md-content md-theme="altTheme" ng-show="showForm" layout-padding>
+            <form name="editForm" ng-submit="save()">
+                <div layout layout-sm="column">
+                    <md-input-container flex>
+                        <label>ID</label>
+                        <input ng-model="test9.id" readonly>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test9.name">
+                            Name
+                        </label>
+                        <input type="text" required minlength=0 maxlength=20 pattern=^[a-zA-Z0-9]*$ ng-model="test9.name">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test9.age">
+                            Age
+                        </label>
+                        <input type="number" required min=0 max=100 ng-model="test9.age">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test9.date">
+                            Date
+                        </label>
+                        <input type="date" required ng-model="test9.date">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label translate="jhipsterApp.test9.time">
+                            Time
+                        </label>
+                        <input type="datetime-local" required ng-model="test9.time">
+                    </md-input-container>
+
+
+                </div>
+                <md-button md-theme="default" type="button" ng-click="clear();" class="action">Clear</md-button>
+                <md-button md-theme="default" class="action">Save</md-button>
+            </form>
+        </md-content>
+        <div id="grid" ui-grid-pinning ui-grid-edit ui-grid-cellNav ui-grid="gridOptions" class="grid"></div>
+</div>

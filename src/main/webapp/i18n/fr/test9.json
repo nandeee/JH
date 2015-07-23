@@ -1,0 +1,22 @@
+{
+    "jhipsterApp": {
+        "test9" : {
+            "home": {
+                "title": "Test9s",
+                "createLabel": "Créer un nouveau Test9",
+                "createOrEditLabel": "Créer ou éditer un Test9"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Test9 {{ id }} ?"
+            },
+            "detail": {
+                "title": "Test9"
+            },
+            "name": "Name",
+            "age": "Age",
+            "date": "Date",
+            "time": "Time"
+        }
+    }
+}
+

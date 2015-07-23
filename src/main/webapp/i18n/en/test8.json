@@ -1,0 +1,21 @@
+{
+    "jhipsterApp": {
+        "test8" : {
+            "home": {
+                "title": "Test8s",
+                "createLabel": "Create a new Test8",
+                "createOrEditLabel": "Create or edit a Test8"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Test8 {{ id }}?"
+            },
+            "detail": {
+                "title": "Test8"
+            },
+            "name": "Name",
+            "age": "Age",
+            "date": "Date",
+            "time": "Time"
+        }
+    }
+}

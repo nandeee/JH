@@ -1,30 +1,30 @@
 'use strict';
 
 angular.module('jhipsterApp')
-    .controller('Test5Controller', function ($scope, Test5) {
+    .controller('Test6Controller', function ($scope, Test6) {
         window.scope = $scope;
-        $scope.test5s = [];
+        $scope.test6s = [];
         $scope.loadAll = function() {
-            Test5.get(function(result) {
-               $scope.test5s = result;
+            Test6.get(function(result) {
+               $scope.test6s = result;
             });
         };
         $scope.loadAll();
 
         $scope.showUpdate = function (id) {
-            Test5.get({id: id}, function(result) {
-                $scope.test5 = result;
+            Test6.get({id: id}, function(result) {
+                $scope.test6 = result;
             });
         };
 
         $scope.save = function () {
-            if ($scope.test5.id != null) {
-                Test5.update($scope.test5,
+            if ($scope.test6.id != null) {
+                Test6.update($scope.test6,
                     function () {
                         $scope.refresh();
                     });
             } else {
-                Test5.save($scope.test5,
+                Test6.save($scope.test6,
                     function () {
                         $scope.refresh();
                     });
@@ -32,12 +32,12 @@ angular.module('jhipsterApp')
         };
 
         $scope.edit = function (entity) {
-            $scope.test5 = entity;
+            $scope.test6 = entity;
             $scope.showForm = true;
         };
 
         $scope.delete = function (id) {
-            Test5.delete({id: id},
+            Test6.delete({id: id},
                 function () {
                     $scope.loadAll();
                     $scope.clear();
@@ -49,22 +49,22 @@ angular.module('jhipsterApp')
             $scope.clear();
         };
 
-        $scope.test5 = {name: null, age: null, date: null, id: null};
+        $scope.test6 = {name: null, age: null, date: null, id: null};
 
         $scope.clear = function () {
-            $scope.test5 = {name: null, age: null, date: null, id: null};
+            $scope.test6 = {name: null, age: null, date: null, id: null};
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
 
         };
 
         $scope.gridOptions = {
-            data: 'test5s',
+            data: 'test6s',
             enableFiltering: true,
             onRegisterApi: function(gridApi) {
                 $scope.gridApi = gridApi;
                 gridApi.edit.on.afterCellEdit($scope, function(rowEntity, colDef, newValue, oldValue) {
-                    Test5.update(rowEntity,
+                    Test6.update(rowEntity,
                         function() {
                             $scope.refresh();
                         });

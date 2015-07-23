@@ -1,30 +1,30 @@
 'use strict';
 
 angular.module('jhipsterApp')
-    .controller('Test5Controller', function ($scope, Test5) {
+    .controller('Test9Controller', function ($scope, Test9) {
         window.scope = $scope;
-        $scope.test5s = [];
+        $scope.test9s = [];
         $scope.loadAll = function() {
-            Test5.get(function(result) {
-               $scope.test5s = result;
+            Test9.get(function(result) {
+               $scope.test9s = result;
             });
         };
         $scope.loadAll();
 
         $scope.showUpdate = function (id) {
-            Test5.get({id: id}, function(result) {
-                $scope.test5 = result;
+            Test9.get({id: id}, function(result) {
+                $scope.test9 = result;
             });
         };
 
         $scope.save = function () {
-            if ($scope.test5.id != null) {
-                Test5.update($scope.test5,
+            if ($scope.test9.id != null) {
+                Test9.update($scope.test9,
                     function () {
                         $scope.refresh();
                     });
             } else {
-                Test5.save($scope.test5,
+                Test9.save($scope.test9,
                     function () {
                         $scope.refresh();
                     });
@@ -32,12 +32,12 @@ angular.module('jhipsterApp')
         };
 
         $scope.edit = function (entity) {
-            $scope.test5 = entity;
+            $scope.test9 = entity;
             $scope.showForm = true;
         };
 
         $scope.delete = function (id) {
-            Test5.delete({id: id},
+            Test9.delete({id: id},
                 function () {
                     $scope.loadAll();
                     $scope.clear();
@@ -49,22 +49,22 @@ angular.module('jhipsterApp')
             $scope.clear();
         };
 
-        $scope.test5 = {name: null, age: null, date: null, id: null};
+        $scope.test9 = {name: null, age: null, date: null, time: null, id: null};
 
         $scope.clear = function () {
-            $scope.test5 = {name: null, age: null, date: null, id: null};
+            $scope.test9 = {name: null, age: null, date: null, time: null, id: null};
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
 
         };
 
         $scope.gridOptions = {
-            data: 'test5s',
+            data: 'test9s',
             enableFiltering: true,
             onRegisterApi: function(gridApi) {
                 $scope.gridApi = gridApi;
                 gridApi.edit.on.afterCellEdit($scope, function(rowEntity, colDef, newValue, oldValue) {
-                    Test5.update(rowEntity,
+                    Test9.update(rowEntity,
                         function() {
                             $scope.refresh();
                         });
@@ -78,16 +78,23 @@ angular.module('jhipsterApp')
 
             }, {
                 field: "name",
-                displayName: "name"
+                displayName: "name",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="text" required validate-required-cell minlength=0 maxlength=20 pattern=^[a-zA-Z0-9]*$ ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
             }, {
                 field: "age",
-                displayName: "age"
+                displayName: "age",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="number" validate-required-cell required min=0 max=100 ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
             }, {
                 field: "date",
                 displayName: "date",
-                editableCellTemplate: '<div> <form name="inputForm"> <input type="datetime-local" ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="date" validate-required-cell ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
+
+            }, {
+                field: "time",
+                displayName: "time",
+                editableCellTemplate: '<div> <form name="inputForm"> <input type="datetime-local" validate-required-cell required ng-class="\'colt\' + col.uid" ui-grid-editor ng-model="MODEL_COL_FIELD" /> </form></div>'
 
 
             }, {

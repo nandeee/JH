@@ -1,0 +1,77 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "5",
+            "fieldValidateRulesMaxlength": "10"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "age",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Age",
+            "fieldNameUnderscored": "age",
+            "fieldInJavaBeanMethod": "Age",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "2",
+            "fieldValidateRulesMax": "10"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "date",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Date",
+            "fieldNameUnderscored": "date",
+            "fieldInJavaBeanMethod": "Date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "time",
+            "fieldType": "DateTime",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Time",
+            "fieldNameUnderscored": "time",
+            "fieldInJavaBeanMethod": "Time",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150723135502",
+    "dto": "no",
+    "pagination": "no",
+    "validation": true
+}

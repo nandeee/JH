@@ -1,0 +1,20 @@
+{
+    "jhipsterApp": {
+        "test6" : {
+            "home": {
+                "title": "Test6s",
+                "createLabel": "Create a new Test6",
+                "createOrEditLabel": "Create or edit a Test6"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Test6 {{ id }}?"
+            },
+            "detail": {
+                "title": "Test6"
+            },
+            "name": "Name",
+            "age": "Age",
+            "date": "Date"
+        }
+    }
+}

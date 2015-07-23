@@ -114,4 +114,38 @@ angular.module('jhipsterApp', ['ui.grid.autoResize', 'ui.grid.pinning', 'ui.grid
         tmhDynamicLocaleProvider.useCookieStorage();
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
 
-    });
+    }).directive('validateRequiredCell', ['uiGridConstants', 'uiGridEditConstants',
+    function(uiGridConstants, uiGridEditConstants) {
+        return {
+            require: ['?^uiGrid', '?^uiGridRenderContainer'],
+            scope: true,
+            compile: function() {
+                return {
+                    pre: function($scope, $elm, $attrs) {
+
+                    },
+                    post: function($scope, $elm, $attrs, controllers) {
+
+                        $elm.bind('blur', function(evt) {
+                            if ($scope.inputForm && !$scope.inputForm.$valid) {
+                                console.log('qwerty');
+                            }
+                        });
+
+                        $elm.bind('keydown', function(evt) {
+                            switch (evt.keyCode) {
+                                case uiGridConstants.keymap.ENTER: // Enter (Leave Field)
+                                case uiGridConstants.keymap.TAB:
+                                    console.log('asdf');
+                                    if ($scope.inputForm && !$scope.inputForm.$valid) {
+                                        console.log('qwerty');
+                                    }
+                                    break;
+                            }
+                        });
+                    }
+                };
+            }
+        };
+    }
+]);
