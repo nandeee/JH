@@ -121,24 +121,19 @@ angular.module('jhipsterApp', ['ui.grid.autoResize', 'ui.grid.pinning', 'ui.grid
             scope: true,
             compile: function() {
                 return {
-                    pre: function($scope, $elm, $attrs) {
-
-                    },
+                    pre: function($scope, $elm, $attrs) {},
                     post: function($scope, $elm, $attrs, controllers) {
-
                         $elm.bind('blur', function(evt) {
                             if ($scope.inputForm && !$scope.inputForm.$valid) {
-                                console.log('qwerty');
+                                evt.stopImmediatePropagation();
                             }
                         });
-
                         $elm.bind('keydown', function(evt) {
                             switch (evt.keyCode) {
-                                case uiGridConstants.keymap.ENTER: // Enter (Leave Field)
+                                case uiGridConstants.keymap.ENTER:
                                 case uiGridConstants.keymap.TAB:
-                                    console.log('asdf');
                                     if ($scope.inputForm && !$scope.inputForm.$valid) {
-                                        console.log('qwerty');
+                                        evt.stopImmediatePropagation();
                                     }
                                     break;
                             }
@@ -147,5 +142,4 @@ angular.module('jhipsterApp', ['ui.grid.autoResize', 'ui.grid.pinning', 'ui.grid
                 };
             }
         };
-    }
-]);
+    }]);
